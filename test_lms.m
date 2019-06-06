@@ -29,7 +29,6 @@ for i=1:N
     %Updating the filter coefficients vector
     temp2 = w + 2*mu*e(i)*xin;
     w = temp2;
-    %w1(:,i) = w;
     
 end
 
