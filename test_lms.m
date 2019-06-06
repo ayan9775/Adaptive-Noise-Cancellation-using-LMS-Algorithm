@@ -22,13 +22,13 @@ for i=1:N
     %Creating the X(k) input vector
     xin = [x(i); xin(1:end-1)];
     
-    temp = d(i) - w'*xin;
-    e(i) = temp;
+    temp1 = d(i) - w'*xin;
+    e(i) = temp1;
     mu = 0.2772;
     
     %Updating the filter coefficients vector
-    wtemp = w + 2*mu*e(i)*xin;
-    w = wtemp;
+    temp2 = w + 2*mu*e(i)*xin;
+    w = temp2;
     %w1(:,i) = w;
     
 end
@@ -81,12 +81,4 @@ disp('The estimated SNR is,')
 digitsOld = digits(8);
 vpa(snr(e1,noi))
 
-% w2 = zeros(1,N);
-% 
-% for j=1:M
-%     w2 = w2 + w1(j,:);
-% end
-% 
-% figure
-% plot(n,w2(1,:))
 
