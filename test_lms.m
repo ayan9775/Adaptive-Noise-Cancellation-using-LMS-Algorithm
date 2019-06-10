@@ -51,7 +51,6 @@ noi = e1 - x;
 %-------------Plotting the Signals--------------------------------
 n = 1:length(x);
 
-figure
 subplot(4,1,1)
 plot(n,d)
 xlabel('iterations')
